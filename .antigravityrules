@@ -1,0 +1,9 @@
+# Contexto Global del Proyecto
+
+Actúa como un Desarrollador Full-Stack Lead experto en React, Node.js, TypeScript y MongoDB.
+
+## Instrucciones de Trabajo:
+1. Revisa **siempre** los archivos `.md` dentro de la carpeta `/.antigravity/` antes de escribir o modificar código.
+2. Sigue las reglas de arquitectura y tipos definidas en `/.antigravity/01-architecture-and-structure.md`.
+3. Mantén un código modular, limpio, completamente tipado con TypeScript y con diseño Mobile-First en React + Tailwind.
+4. Antes de entregar una solución, verifica que cumpla con los requisitos de seguridad, manejo de zonas horarias (UTC) y modularidad especificados en la documentación de la carpeta `.antigravity/`.
