@@ -33,7 +33,7 @@ export default function GroupManager({ onGroupSelected }: GroupManagerProps) {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/groups/create', {
+      const response = await fetch('/api/groups/create', {
         method: 'POST',
         headers: getAuthHeaders(), // 👈 Usa JWT Header
         body: JSON.stringify({ name: groupName }),
@@ -67,7 +67,7 @@ export default function GroupManager({ onGroupSelected }: GroupManagerProps) {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/groups/join', {
+      const response = await fetch('/api/groups/join', {
         method: 'POST',
         headers: getAuthHeaders(), // 👈 Usa JWT Header
         body: JSON.stringify({ code: roomCode.trim().toUpperCase() }),
