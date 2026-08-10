@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { calculateGroupOverlap, IUserSchedule } from '../utils/matchingEngine';
+import { calculateGroupOverlap, type IUserSchedule } from '../utils/matchingEngine';
 
 const DAYS = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
 
@@ -110,8 +110,8 @@ export default function GroupView() {
                                                     <td
                                                         key={d}
                                                         className={`p-1.5 text-center border border-slate-800/40 text-[10px] font-bold ${isMatch
-                                                                ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
-                                                                : 'bg-slate-950/30 text-slate-700'
+                                                            ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
+                                                            : 'bg-slate-950/30 text-slate-700'
                                                             }`}
                                                     >
                                                         {isMatch ? '🎯 Libre' : ''}
