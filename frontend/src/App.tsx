@@ -20,7 +20,7 @@ function App() {
 
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/auth/profile', {
+        const response = await fetch('/api/auth/profile', {
           headers: {
             'Authorization': `Bearer ${token}`, // Envía el token JWT desde el estado
             'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ function App() {
     if (!token) return;
     setIsSaving(true);
     try {
-      const response = await fetch('http://localhost:5000/api/auth/availability', {
+      const response = await fetch('/api/auth/availability', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
