@@ -25,7 +25,7 @@ export default function AuthModal({ onLoginSuccess }: AuthModalProps) {
             : { email: email.trim().toLowerCase(), password: password.trim() };
 
         try {
-            const response = await fetch(`/${endpoint}`, {
+            const response = await fetch(endpoint, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
