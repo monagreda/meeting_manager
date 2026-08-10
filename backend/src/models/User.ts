@@ -14,6 +14,7 @@ export interface IUser extends Document {
   timezone: string;
   sleepStart: string; // "HH:MM" local time
   sleepEnd: string;   // "HH:MM" local time
+  availability: any[];
   createdAt: Date;
   updatedAt: Date;
 }
