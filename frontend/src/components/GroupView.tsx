@@ -15,7 +15,7 @@ export default function GroupView() {
         setError('');
 
         try {
-            const res = await fetch(`http://localhost:5000/api/groups/${groupCode}`);
+            const res = await fetch(`/api/groups/${groupCode}`);
             if (!res.ok) throw new Error('Sala no encontrada');
 
             const data = await res.json();

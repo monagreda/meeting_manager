@@ -93,7 +93,7 @@ export default function GroupManager({ onGroupSelected }: GroupManagerProps) {
   const refreshGroup = async (code: string) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/groups/${code}`, {
+      const response = await fetch(`/api/groups/${code}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
