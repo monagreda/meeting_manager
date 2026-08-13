@@ -57,6 +57,10 @@ function App() {
   const handleSaveToBackend = async () => {
     if (!token) return;
     setIsSaving(true);
+
+    // Obtener la zona horaria actual del navegador del usuario
+    const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
     try {
       const response = await fetch('/api/auth/availability', {
         method: 'POST',
@@ -68,6 +72,7 @@ function App() {
           sleepStart,
           sleepEnd,
           weeklyAvailability: availability,
+          timezone: userTimezone,
         }),
       });
 

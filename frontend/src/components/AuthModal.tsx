@@ -19,10 +19,17 @@ export default function AuthModal({ onLoginSuccess }: AuthModalProps) {
 
         const endpoint = isRegister ? '/api/auth/register' : '/api/auth/login';
 
+        const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
         // 👈 Ahora enviamos `username` en lugar de `name`
         const payload = isRegister
-            ? { username: username.trim(), email: email.trim().toLowerCase(), password: password.trim() }
-            : { email: email.trim().toLowerCase(), password: password.trim() };
+            ? {
+                username: username.trim(),
+                email: email.trim().toLowerCase(),
+                password: password.trim(),
+                timezone: userTimezone
+            }
+            : { email: email.trim().toLowerCase(), password: password.trim(), timezone: userTimezone };
 
         try {
             const response = await fetch(endpoint, {
